@@ -1,0 +1,34 @@
+.article {
+    margin: 1em;
+    border: 1px solid black;
+}
+
+.trackGroup {
+    border: 1px solid blue;
+}
+
+.scriptSelectButton {
+    background-color: gray;
+}
+
+.scriptSelectButtonActive {
+    background-color: blue;
+}
+
+.objectionSelectButton {
+    background-color: gray;
+}
+
+.objectionSelectButtonActive {
+    background-color: red;
+}
+
+.objection {
+    margin: 1em;
+    border: 1px solid green;
+}
+
+.wordTrack {
+    margin: 1em;
+    border: 1px solid orange;
+}

@@ -1,0 +1,7 @@
+@import './index.css';
+
+.app {
+    min-height: 100vh;
+    padding: 0 1em 1em 1em;
+    background-color: var(--main-background-color);
+}
