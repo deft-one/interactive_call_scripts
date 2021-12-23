@@ -1,4 +1,4 @@
-import { Outlet, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from './header.module.css';
 
 const Header = () => {
@@ -6,6 +6,15 @@ const Header = () => {
         <>
             <nav>
                 <ul className={styles.navUl}>
+                    <li className={styles.linkLi}>
+                        <NavLink 
+                            className={
+                                ({isActive}) => {
+                                    return isActive ? `${styles.link} ${styles.activeLink}` : `${styles.link}`;
+                                }
+                            } 
+                            to="/">Home</NavLink>
+                    </li>
                     <li className={styles.linkLi}>
                         <NavLink 
                             className={
@@ -37,7 +46,6 @@ const Header = () => {
                     </li>
                 </ul>
             </nav>
-            <Outlet />
         </>
     );
 }

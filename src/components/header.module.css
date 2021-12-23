@@ -28,4 +28,5 @@
 
 .activeLink {
     color: var(--accent-color);
+    font-weight: 800;
 }
