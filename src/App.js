@@ -14,7 +14,7 @@ export default function App() {
       <Header />
       <Routes>
         <Route index element={ <HomePage /> } />
-        <Route path="/" element={ <HomePage /> } />
+        <Route exact path="/interactive_call_scripts" element={ <HomePage /> } />
         <Route path="/scripts" element={ <Scripts /> } />
         <Route path="/editor" element={ <Editor /> } />
         <Route path="/dashboard" element={ <Dashboard /> } />
