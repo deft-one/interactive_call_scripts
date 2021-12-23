@@ -25,3 +25,7 @@
     border-left: 5px solid var(--accent-color);
     border-right: 5px solid var(--accent-color);
 }
+
+.activeLink {
+    color: var(--accent-color);
+}

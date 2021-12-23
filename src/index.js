@@ -13,12 +13,12 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={ <App /> }>
-          <Route index element={<HomePage />} />
+        <Route exact path="/" element={ <App /> } >
+          <Route index element={ <HomePage /> } />
           <Route path="scripts" element={ <Scripts /> } />
           <Route path="editor" element={ <Editor /> } />
           <Route path="dashboard" element={ <Dashboard /> } />
-          <Route path="*" element={<h2>There's Nothing Here!</h2>} />
+          <Route path="*" element={ <h2>There's Nothing Here!</h2> } />
         </Route>
       </Routes>
     </BrowserRouter>

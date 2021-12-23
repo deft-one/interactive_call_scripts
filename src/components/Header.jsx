@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 import styles from './header.module.css';
 
 const Header = () => {
@@ -6,9 +6,35 @@ const Header = () => {
         <>
             <nav>
                 <ul className={styles.navUl}>
-                    <li className={styles.linkLi}><Link className={styles.link} to="/scripts">Scripts</Link></li>
-                    <li className={styles.linkLi}><Link className={styles.link} to="/editor">Editor</Link></li>
-                    <li className={styles.linkLi}><Link className={styles.link} to="/dashboard">Dashboard</Link></li>
+                    <li className={styles.linkLi}>
+                        <NavLink 
+                            className={
+                                ({isActive}) => {
+                                    return isActive ? `${styles.link} ${styles.activeLink}` : `${styles.link}`;
+                                }
+                            } 
+                            to="/scripts">Scripts</NavLink>
+                    </li>
+                    <li className={styles.linkLi}>
+                        <NavLink 
+                            className={
+                                ({isActive}) => {
+                                    return isActive ? `${styles.link} ${styles.activeLink}` : `${styles.link}`;
+                                }
+                            }
+                            to="/editor"
+                            >Editor</NavLink>
+                    </li>
+                    <li className={styles.linkLi}>
+                        <NavLink 
+                            className={
+                                ({isActive}) => {
+                                    return isActive ? `${styles.link} ${styles.activeLink}` : `${styles.link}`;
+                                }
+                            }
+                            to="/dashboard"
+                            >Dashboard</NavLink>
+                    </li>
                 </ul>
             </nav>
             <Outlet />
