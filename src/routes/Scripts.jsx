@@ -28,51 +28,53 @@ const Scripts = () => {
 
     return(
         <>
-            <div className={styles.scriptTypeSelector}>
-                {
-                    data.map((item, index) => {
-                        return <button 
-                                    key={index} 
-                                    className={`${styles.scriptSelectButton} ${activeScriptButton === item.type ? styles.scriptSelectButtonActive : ''}`} 
-                                    onClick={(e) => {handleScriptTypeClick(e)}}>{item.type}
-                                </button>
-                    })
-                }
-            </div>
-            <main>
-                <h2>{scriptType} Call Scripts</h2>
-                {
-                    data.map((item, index) => {
-                        return (
-                            item.type === scriptType ? 
-                            <article key={index} className={styles.article}>
-                                <div className={styles.objContainer}>
+            <main className={styles.main}>
+                <div className={styles.scriptTypeSelectors}>
+                    {
+                        data.map((item, index) => {
+                            return <button 
+                                        key={index} 
+                                        className={`${styles.scriptSelectButton} ${activeScriptButton === item.type ? styles.scriptSelectButtonActive : ''}`} 
+                                        onClick={(e) => {handleScriptTypeClick(e)}}>{item.type}
+                                    </button>
+                        })
+                    }
+                </div>
+                <div>
+                    <p className={activeScriptButton === '' ? styles.buttonHintScripts : styles.buttonHintObjections}>{ scriptType === '' ? 'Please select your script type above.' : 'Please select your objection type below.' }</p>
+                    {
+                        data.map((item, index) => {
+                            return (
+                                item.type === scriptType ? 
+                                <article key={index} className={styles.article}>
+                                    <div className={styles.objContainer}>
+                                        {
+                                            item.objTypes.map((objection, index) => {
+                                                return item.type === scriptType ?
+                                                <button 
+                                                    key={index}
+                                                    className={`${styles.objectionSelectButton} ${activeObjectionButton === objection.name ? styles.objectionSelectButtonActive : ''}`} 
+                                                    onClick={(e) => {handleObjectionTypeClick(e)}}>{`${objection.name}`}
+                                                </button> : null
+                                            })
+                                        }
+                                    </div>
                                     {
-                                        item.objTypes.map((objection, index) => {
-                                            return item.type === scriptType ?
-                                            <button 
-                                                key={index}
-                                                className={`${styles.objectionSelectButton} ${activeObjectionButton === objection.name ? styles.objectionSelectButtonActive : ''}`} 
-                                                onClick={(e) => {handleObjectionTypeClick(e)}}>{`${objection.name}`}
-                                            </button> : null
+                                        item.objTypes.map((type, index) => {
+                                            return(
+                                                item.type === scriptType && objectionType === type.name ?
+                                                <div key={index} className={styles.trackGroup}>
+                                                    <p className={styles.objection}>{ type.objection }</p>
+                                                    <p className={styles.wordTrack}>{ type.wordTrack }</p>
+                                                </div> : null
+                                            );
                                         })
                                     }
-                                </div>
-                                {
-                                    item.objTypes.map((type, index) => {
-                                        return(
-                                            item.type === scriptType && objectionType === type.name ?
-                                            <div key={index} className={styles.trackGroup}>
-                                                <p className={styles.objection}>{ type.objection }</p>
-                                                <p className={styles.wordTrack}>{ type.wordTrack }</p>
-                                            </div> : null
-                                        );
-                                    })
-                                }
-                            </article> : null
-                        );
-                    })
-                }
+                                </article> : null
+                            );
+                        })
+                    }
+                </div>
             </main>
         </>
     );

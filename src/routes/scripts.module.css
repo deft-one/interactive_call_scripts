@@ -1,34 +1,98 @@
-.article {
-    margin: 1em;
-    border: 1px solid black;
+.main {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .trackGroup {
-    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
 }
 
-.scriptSelectButton {
+.scriptTypeSelectors, .objContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1em 0;
+}
+
+.scriptSelectButton, .objectionSelectButton {
+    flex: 0 1 auto;
+    padding: 0.25em 0.5em;
     background-color: gray;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
-.scriptSelectButtonActive {
-    background-color: blue;
+.scriptSelectButtonActive, .objectionSelectButtonActive {
+    background-color: var(--accent-color);
 }
 
-.objectionSelectButton {
-    background-color: gray;
+.buttonHintScripts, .buttonHintObjections {
+    position: relative;
+    padding: 1em 0;
+    text-align: center;
+    color: var(--accent-color);
 }
 
-.objectionSelectButtonActive {
-    background-color: red;
+.buttonHintScripts::before, .buttonHintObjections::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+}
+
+.buttonHintScripts::before {
+    top: -1.5em;
+    border: 15px solid transparent;
+    border-bottom: 20px solid var(--accent-color);
+}
+
+.buttonHintObjections::before {
+    bottom: -1.5em;
+    border: 15px solid transparent;
+    border-top: 20px solid var(--accent-color);
+}
+
+.objection, .wordTrack {
+    position: relative;
+    margin: 2em 0;
+    padding: 1em;
+    border-radius: 0.5em;
 }
 
 .objection {
-    margin: 1em;
-    border: 1px solid green;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+    background-color: rgb(61, 0, 27);
 }
 
 .wordTrack {
-    margin: 1em;
-    border: 1px solid orange;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+    background-color: rgb(22, 0, 59);
+}
+
+.objection::before, .wordTrack::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border: 1.5em solid transparent;
+    border-bottom: 0px solid transparent;
+}
+
+.objection::before {
+    left: -3em;
+    border-right: 1.5em solid rgb(61, 0, 27);
+}
+
+.wordTrack::before {
+    right: -3em;
+    border-left: 1.5em solid rgb(22, 0, 59);
 }
