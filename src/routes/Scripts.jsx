@@ -64,8 +64,8 @@ const Scripts = () => {
                                             return(
                                                 item.type === scriptType && objectionType === type.name ?
                                                 <div key={index} className={styles.trackGroup}>
-                                                    <p className={styles.objection}>{ type.objection }</p>
-                                                    <p className={styles.wordTrack}>{ type.wordTrack }</p>
+                                                    <p className={styles.objection} dangerouslySetInnerHTML={{__html: type.objection}} />
+                                                    <p className={styles.wordTrack} dangerouslySetInnerHTML={{__html: type.wordTrack}} />
                                                 </div> : null
                                             );
                                         })

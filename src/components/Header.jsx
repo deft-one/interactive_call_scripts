@@ -13,7 +13,7 @@ const Header = () => {
                                     return isActive ? `${styles.link} ${styles.activeLink}` : `${styles.link}`;
                                 }
                             } 
-                            to="/">Home</NavLink>
+                            to="/interactive_call_scripts">Home</NavLink>
                     </li>
                     <li className={styles.linkLi}>
                         <NavLink 
