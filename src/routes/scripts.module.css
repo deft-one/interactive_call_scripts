@@ -37,7 +37,7 @@
     background-color: var(--accent-color);
 }
 
-.buttonHintScripts, .buttonHintObjections {
+/* .buttonHintScripts, .buttonHintObjections {
     position: relative;
     padding: 0.75em 2em;
     text-align: center;
@@ -63,7 +63,7 @@
 .buttonHintObjections::before {
     border-bottom: none;
     border-top: 30px solid var(--highlight-color);
-}
+} */
 
 .objection, .wordTrack {
     position: relative;
@@ -105,9 +105,9 @@
     border-left: 1em solid var(--wordTrack-color);
 }
 
-@media screen and (min-width: 450px) {
+/* @media screen and (min-width: 450px) {
     .buttonHintScripts::before, .buttonHintObjections::before {
         left: 50%;
         transform: translate(-500%, -50%);
     }
-}
+} */

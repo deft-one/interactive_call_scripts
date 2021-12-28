@@ -41,7 +41,7 @@ const Scripts = () => {
                     }
                 </div>
                 <div>
-                    <p className={activeScriptButton === '' ? styles.buttonHintScripts : styles.buttonHintObjections}>{ scriptType === '' ? 'Please select your script type above.' : 'Please select your objection type below.' }</p>
+                    {/* <p className={activeScriptButton === '' ? styles.buttonHintScripts : styles.buttonHintObjections}>{ scriptType === '' ? 'Please select your script type above.' : 'Please select your objection type below.' }</p> */}
                     {
                         data.map((item, index) => {
                             return (
