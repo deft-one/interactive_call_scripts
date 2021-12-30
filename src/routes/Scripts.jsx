@@ -1,80 +1,69 @@
-import useFetch from 'react-fetch-hook';
-import styles from './scripts.module.css';
+import axios from 'axios';
+import { useEffect } from 'react';
 import { useState } from 'react';
+import styles from './editor.module.css';
+import ScriptSelectors from '../components/ScriptSelectors';
+import ObjectionSelectors from '../components/ObjectionSelectors';
+import Conversation from '../components/Conversation';
+import ScriptsLoading from '..//components/ScriptsLoading';
 
 const Scripts = () => {
 
-    const { isLoading, error, data } = useFetch("https://61b8749564e4a10017d18faa.mockapi.io/scripts");
+    const baseURL = 'https://61b8749564e4a10017d18faa.mockapi.io/scripts';
 
-    const [ scriptType, setScriptType ] = useState('');
-    const [ objectionType, setObjectionType ] = useState('');
-    const [ activeScriptButton, setActiveScriptButton ] = useState('');
-    const [ activeObjectionButton, setActiveObjectionButton ] = useState('');
+    const [scripts, setScripts] = useState(null);
+    const [activeScriptType, setActiveScriptType] = useState('');
+    const [activeObjectionType, setActiveObjectionType] = useState('');
 
-    function handleScriptTypeClick(e) {
-        setScriptType(e.target.innerText);
-        setActiveScriptButton(e.target.innerText);
-        setObjectionType(data[0].objTypes[0].name);
-        setActiveObjectionButton(data[0].objTypes[0].name);
+    function handleScriptClick(e) {
+        setActiveScriptType(e.target.innerText);
     }
 
-    function handleObjectionTypeClick(e) {
-        setObjectionType(e.target.innerText);
-        setActiveObjectionButton(e.target.innerText);
+    function handleObjectionCick(e) {
+        setActiveObjectionType(e.target.innerText);
     }
 
-    if (isLoading) return "Loading...";
-    if (error) return "Error!";
+    useEffect(() => {
+        axios.get(baseURL).then((response) => {
+            setScripts(response.data);
+        });
+    }, []);
+
+    if (!scripts) {
+        return <ScriptsLoading />
+    }
 
     return(
         <>
             <main className={styles.main}>
-                <div className={styles.scriptTypeSelectors}>
+                <ScriptSelectors 
+                    handleScriptClick={handleScriptClick} 
+                    activeScriptType={activeScriptType} 
+                    setActiveScriptType={(e) => { setActiveScriptType(e) }} 
+                    scripts={scripts} 
+                />
+                <article className={styles.article}>
                     {
-                        data.map((item, index) => {
-                            return <button 
-                                        key={index} 
-                                        className={`${styles.scriptSelectButton} ${activeScriptButton === item.type ? styles.scriptSelectButtonActive : ''}`} 
-                                        onClick={(e) => {handleScriptTypeClick(e)}}>{item.type}
-                                    </button>
-                        })
+                        activeScriptType !== '' ? 
+                        <ObjectionSelectors 
+                        handleObjectionCick={(e) => {handleObjectionCick(e)}} 
+                        setActiveObjectionType = {(e) => { setActiveObjectionType(e) }} 
+                        activeScriptType={activeScriptType} 
+                        activeObjectionType={activeObjectionType} 
+                        scripts={scripts} 
+                    /> :
+                    null
                     }
-                </div>
-                <div>
-                    {/* <p className={activeScriptButton === '' ? styles.buttonHintScripts : styles.buttonHintObjections}>{ scriptType === '' ? 'Please select your script type above.' : 'Please select your objection type below.' }</p> */}
                     {
-                        data.map((item, index) => {
-                            return (
-                                item.type === scriptType ? 
-                                <article key={index} className={styles.article}>
-                                    <div className={styles.objContainer}>
-                                        {
-                                            item.objTypes.map((objection, index) => {
-                                                return item.type === scriptType ?
-                                                <button 
-                                                    key={index}
-                                                    className={`${styles.objectionSelectButton} ${activeObjectionButton === objection.name ? styles.objectionSelectButtonActive : ''}`} 
-                                                    onClick={(e) => {handleObjectionTypeClick(e)}}>{`${objection.name}`}
-                                                </button> : null
-                                            })
-                                        }
-                                    </div>
-                                    {
-                                        item.objTypes.map((type, index) => {
-                                            return(
-                                                item.type === scriptType && objectionType === type.name ?
-                                                <div key={index} className={styles.trackGroup}>
-                                                    <p className={styles.objection} dangerouslySetInnerHTML={{__html: type.objection}} />
-                                                    <p className={styles.wordTrack} dangerouslySetInnerHTML={{__html: type.wordTrack}} />
-                                                </div> : null
-                                            );
-                                        })
-                                    }
-                                </article> : null
-                            );
-                        })
+                        activeObjectionType !== '' ? 
+                        <Conversation 
+                        scripts={scripts} 
+                        activeScriptType={activeScriptType} 
+                        activeObjectionType={activeObjectionType} 
+                    /> :
+                    null
                     }
-                </div>
+                </article>
             </main>
         </>
     );

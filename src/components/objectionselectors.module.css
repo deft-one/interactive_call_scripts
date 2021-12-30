@@ -1,0 +1,26 @@
+.scriptTypeSelectors, .objContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 0 0 0;
+}
+
+.scriptSelectButton, .objectionSelectButton {
+    flex: 0 1 auto;
+    padding: 0.25em 0.5em;
+    margin: 0.5em;
+    background-color: rgb(64, 64, 64);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0.25em;
+    transition: all 300ms ease-in-out;
+}
+
+.scriptSelectButton:hover, .objectionSelectButton:hover {
+    background-color: var(--accent-color);
+}
+
+.scriptSelectButtonActive, .objectionSelectButtonActive {
+    background-color: var(--accent-color);
+}

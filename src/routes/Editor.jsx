@@ -1,6 +1,9 @@
+// import styles from './editor.module.css';
+
 const Editor = () => {
+
     return(
-        <h1>Editor under construction!</h1>
+        <h1>Editor Coming Soon!</h1>
     );
 }
 
