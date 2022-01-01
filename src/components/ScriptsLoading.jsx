@@ -1,6 +1,10 @@
+import styles from './scriptsloading.module.css';
+
 const ScriptsLoading = () => {
     return(
-        <p>Loading!</p>
+        <div className={styles.loadingContainer}>
+            <p className={styles.loader}>Loading...</p>
+        </div>
     );   
 }
 

@@ -1,0 +1,52 @@
+.trackGroup {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+}
+
+.objection, .wordTrack {
+    position: relative;
+    width: 80%;
+    max-width: 450px;
+    margin: 2em 0;
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.3);
+}
+
+.objection {
+    align-self: flex-start;
+    background-color: var(--objection-color);
+}
+
+.wordTrack {
+    align-self: flex-end;
+    background-color: var(--wordTrack-color);
+}
+
+.objection::before, .wordTrack::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border: 1em solid transparent;
+}
+
+.objection::before {
+    left: -2em;
+    border-right: 1em solid var(--objection-color);
+}
+
+.wordTrack::before {
+    right: -2em;
+    border-left: 1em solid var(--wordTrack-color);
+}
+
+.saveButton {
+    align-self: center;
+    padding: 0.5em 2em;
+    color: black;
+    cursor: pointer;
+}
