@@ -1,7 +1,7 @@
 [
     {
      "type": "Internet",
-     "id": "001",
+     "id": "0",
      "objTypes": [
       {
        "name": "Price",
@@ -52,7 +52,7 @@
     },
     {
      "type": "Phone",
-     "id": "002",
+     "id": "1",
      "objTypes": [
       {
        "name": "Price",
@@ -103,7 +103,7 @@
     },
     {
      "type": "Equity",
-     "id": "003",
+     "id": "2",
      "objTypes": [
       {
        "name": "Price",
@@ -154,7 +154,7 @@
     },
     {
      "type": "Lower APR",
-     "id": "002",
+     "id": "3",
      "objTypes": [
       {
        "name": "Price",
@@ -205,7 +205,7 @@
     },
     {
      "type": "Desk Log",
-     "id": "002",
+     "id": "4",
      "objTypes": [
       {
        "name": "Price",

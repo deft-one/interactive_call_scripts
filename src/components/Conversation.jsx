@@ -9,9 +9,18 @@ const Conversation = ({scripts, activeScriptType, activeObjectionType}) => {
                 return script.type === activeScriptType ?
                 script.objTypes.map((objType, index) => {
                     return objType.name === activeObjectionType ?
-                    <div key={index} className={styles.trackGroup}>
-                        <p className={styles.objection} dangerouslySetInnerHTML={{__html: objType.objection}} />
-                        <p className={styles.wordTrack} dangerouslySetInnerHTML={{__html: objType.wordTrack}} />
+                    <div 
+                        key={index} 
+                        className={styles.trackGroup}
+                    >
+                        <p 
+                            className={styles.objection} 
+                            dangerouslySetInnerHTML={{__html: objType.objection}} 
+                        />
+                        <p 
+                            className={styles.wordTrack} 
+                            dangerouslySetInnerHTML={{__html: objType.wordTrack}} 
+                        />
                     </div> : null
                 }) :
                 null
