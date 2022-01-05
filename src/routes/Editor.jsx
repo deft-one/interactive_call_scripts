@@ -36,13 +36,21 @@ const Editor = () => {
         });
     }
 
+    function scriptInputResize(e) {
+        e.target.style.height = 'auto';
+        e.target.style.height = e.target.scrollHeight + 'px';
+    }
+
     function handleObjectionChange(e) {
         setObjectionText(e.target.value);
+        scriptInputResize(e);
     }
 
     function handleWordTrackChange(e) {
         setWordTrackText(e.target.value);
+        scriptInputResize(e);
     }
+
 
     useEffect(() => {
         getScripts();

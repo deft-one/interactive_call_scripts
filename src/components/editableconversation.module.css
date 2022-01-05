@@ -1,6 +1,9 @@
 .trackGroup {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
     padding: 0 2em;
 }
 
@@ -13,6 +16,8 @@
     border-radius: 0.5em;
     border: none;
     outline: none;
+    overflow: hidden;
+    resize: none;
     box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.3);
 }
 

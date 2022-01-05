@@ -1,6 +1,6 @@
 import styles from '../components/editableconversation.module.css';
 
-const EditableConversation = ({scripts, objectionText, wordTrackText, activeScriptType, activeObjectionType, handleSaveClick, handleObjectionChange, handleWordTrackChange}) => {
+const EditableConversation = ({scripts, objectionText, wordTrackText, activeScriptType, activeObjectionType, handleSaveClick, handleObjectionChange, handleWordTrackChange, scriptInputResize}) => {
     return(
         <div className={styles.trackGroup}>
             {
@@ -14,20 +14,20 @@ const EditableConversation = ({scripts, objectionText, wordTrackText, activeScri
                         id={script.id} 
                         key={script.id} 
                         className={styles.trackGroup}>
-                        <input 
+                        <textarea 
                             id={`objType_${index}`} 
                             type="text" 
                             className={styles.objection} 
                             value={objectionText} 
                             onChange={handleObjectionChange} 
-                        />
-                        <input 
+                        ></textarea>
+                        <textarea 
                             id={`wordType_${index}`} 
                             type="text" 
                             className={styles.wordTrack} 
                             value={wordTrackText} 
                             onChange={handleWordTrackChange} 
-                        />
+                        ></textarea>
                         <button onClick={handleSaveClick} className={styles.saveButton}>Save</button>
                     </form> : null
                 }) :
