@@ -63,13 +63,23 @@
         ]
     },
     {
-        "type": "",
+        "type": "Tech Support",
         "id": "3",
         "objTypes": [
             {
                 "name": "Greeting",
-                "objection": "<p><b>Customer: </b>Hello?</p>",
-                "wordTrack": "<p>Hello, may I speak with [customerName] please?</p><p><em>They reply this is he/she.</em></p><p>Good morning / afternoon [customerName], this is [yourName] with [yourCompany] and I'm calling to remind you of your upcoming appointment at [day / time].</p>"
+                "objection": "<p><b>Customer: </b>Hi I'm calling because...</p>",
+                "wordTrack": "<p>Hello, my name is [yourName], and I'll be happy to help you with this today.  I just need togather a little more info before trying to diagnose the root of the issue.</p>"
+            },
+            {
+                "name": "Blue Screen",
+                "objection": "<p><b>Customer: </b>My computer is showing me the blue screen...</p>",
+                "wordTrack": "<p>Ok, I'll walk you through a few steps to see if we can narrow down the source.</p><ul><li>Step 1: ...</li><li>Step 2: ...</li><li>Step 3: ...</li></ul>"
+            },
+            {
+                "name": "Locking Up",
+                "objection": "<p><b>Customer: </b>My computer keeps locking up...</p>",
+                "wordTrack": "<p>Ok, I'll walk you through a few steps to see if we can narrow down the source.</p><ul><li>Step 1: ...</li><li>Step 2: ...</li><li>Step 3: ...</li></ul>"
             }
         ]
     }

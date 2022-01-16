@@ -5,7 +5,7 @@ const HomePage = () => {
         <main>
             <article className={styles.homeContainer}>
                 <h1 className={styles.h1}>Interactive Call Scripts</h1>
-                <p className={styles.p}><em>The first version, built with PHP and MySQL, can be found <a href="https://www.deftoriginals.com/interactive-call-scripts/">here</a>. It is fully functional with user login, password reset and a script editor that's more advanced. This version was built to gain practice using React, React Router, CSS Modules, Axios and a JSON API.</em></p>
+                <p className={styles.p}><em>The first version, built with PHP and MySQL, can be found <a className={styles.link} href="https://www.deftoriginals.com/interactive-call-scripts/">here</a>. It is fully functional with user login, password reset and a script editor that's more advanced. This version was built to gain practice using React, React Router, CSS Modules, Axios and a JSON API.</em></p>
                 <h2 className={styles.h2}>Scripts</h2>
                 <p className={styles.p}>This page uses Axios to make an API call to fetch the call scripts and display the data as conversation bubbles.</p>
                 <p className={styles.p}>

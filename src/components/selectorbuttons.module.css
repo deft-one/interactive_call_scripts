@@ -2,7 +2,11 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 0 0 0 0;
+    padding: 0;
+}
+
+.objContainer {
+    margin-top: 1em;
 }
 
 .scriptSelectButton, .objectionSelectButton {

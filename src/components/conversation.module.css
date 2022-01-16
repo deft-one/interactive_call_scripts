@@ -46,3 +46,12 @@
     right: -2em;
     border-left: 1em solid var(--wordTrack-color);
 }
+
+.wordTrack ul {
+    margin-top: 1em;
+    list-style-type: none;
+}
+
+.wordTrack ul li {
+    margin-top: 0.5em;
+}
