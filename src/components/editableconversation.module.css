@@ -14,11 +14,16 @@
     margin: 2em 0;
     padding: 1em;
     border-radius: 0.5em;
-    border: none;
+    border: 2px solid transparent;
     outline: none;
     overflow: hidden;
     resize: none;
     box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.3);
+    caret-color: var(--main-text-color);
+}
+
+.objection:focus, .wordTrack:focus {
+    border: 2px solid var(--accent-color);
 }
 
 .objection {
@@ -31,29 +36,17 @@
     background-color: var(--wordTrack-color);
 }
 
-.objection::before, .wordTrack::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border: 1em solid transparent;
-}
-
-.objection::before {
-    left: -2em;
-    border-right: 1em solid var(--objection-color);
-}
-
-.wordTrack::before {
-    right: -2em;
-    border-left: 1em solid var(--wordTrack-color);
-}
-
 .saveButton {
     align-self: center;
     padding: 0.5em 2em;
-    color: black;
+    font-size: 1em;
     cursor: pointer;
+    border: none;
+    border-radius: 0.25em;
+    background-color: var(--obj-selector-button);
+    font-weight: 800;
+}
+
+.saveButton:hover {
+    opacity: 0.7;
 }

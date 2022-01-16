@@ -1,4 +1,4 @@
-import styles from './scriptselectors.module.css';
+import styles from './selectorbuttons.module.css';
 
 const ScriptSelectors = ({scripts, activeScriptType, handleScriptClick}) => {
 

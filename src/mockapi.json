@@ -1,257 +1,76 @@
 [
     {
-     "type": "Internet",
-     "id": "0",
-     "objTypes": [
-      {
-       "name": "Price",
-       "objection": "This is the internet price objection.",
-       "wordTrack": "<p>The data passed from the API is being converted to HTML, so, this is actually a paragraph with <b>BOLD TEXT</b> or <em>itallic text</em>.</p><h1>Even an H1!</h1>"
-      },
-      {
-       "name": "Trade",
-       "objection": "This is the internet trade objection.",
-       "wordTrack": "This is the internet trade word track."
-      },
-      {
-       "name": "Avail",
-       "objection": "This is the internet availability objection.",
-       "wordTrack": "This is the internet availability word track."
-      },
-      {
-       "name": "Dist",
-       "objection": "This is the internet distance objection.",
-       "wordTrack": "This is the internet distance word track."
-      },
-      {
-       "name": "Credit",
-       "objection": "This is the internet credit objection.",
-       "wordTrack": "This is the internet credit word track."
-      },
-      {
-       "name": "Cash",
-       "objection": "This is the internet cash down objection.",
-       "wordTrack": "This is the internet cash down word track."
-      },
-      {
-       "name": "Rate",
-       "objection": "This is the internet rate objection.",
-       "wordTrack": "This is the internet rate word track."
-      },
-      {
-       "name": "Msg",
-       "objection": "This is the internet message comment.",
-       "wordTrack": "This is the internet message word track."
-      },
-      {
-       "name": "Appt",
-       "objection": "This is the internet appointment comment.",
-       "wordTrack": "This is the internet appointment word track."
-      }
-     ]
+        "type": "Web Lead",
+        "id": "0",
+        "objTypes": [
+            {
+                "name": "Greeting",
+                "objection": "<p><b>Customer: </b>Hello?</p>",
+                "wordTrack": "<p>Hello, may I speak with [customerName] please?"
+            },
+            {
+                "name": "Price",
+                "objection": "Your price is too high / Someone else does it cheaper",
+                "wordTrack": "<p>Your carefully crafted response goes here, complete with <b>bold</b> and <em>itallic</em> text if needed.</p>"
+            },
+            {
+                "name": "Supply",
+                "objection": "You don't have what I'm looking for.",
+                "wordTrack": "<p>Your carefully crafted response goes here, complete with <b>bold</b> and <em>itallic</em> text if needed.</p>"
+            },
+            {
+                "name": "Set Appt",
+                "objection": "Customer indicates they may be willing to come in.",
+                "wordTrack": "<p>Your carefully crafted appointment word track goes here.</p>"
+            },
+            {
+                "name": "Voicemail",
+                "objection": "Call goes to voicemail.",
+                "wordTrack": "<p>Your carefully crafted voicemail message word track goes here.</p>"
+            }
+        ]
     },
     {
-     "type": "Phone",
-     "id": "1",
-     "objTypes": [
-      {
-       "name": "Price",
-       "objection": "This is the phone price objection.",
-       "wordTrack": "This is the phone price word track."
-      },
-      {
-       "name": "Trade",
-       "objection": "This is the phone trade objection.",
-       "wordTrack": "This is the phone trade word track."
-      },
-      {
-       "name": "Avail",
-       "objection": "This is the phone availability objection.",
-       "wordTrack": "This is the phone availability word track."
-      },
-      {
-       "name": "Dist",
-       "objection": "This is the phone distance objection.",
-       "wordTrack": "This is the phone distance word track."
-      },
-      {
-       "name": "Credit",
-       "objection": "This is the phone credit objection.",
-       "wordTrack": "This is the phone credit word track."
-      },
-      {
-       "name": "Cash",
-       "objection": "This is the phone cash down objection.",
-       "wordTrack": "This is the phone cash down word track."
-      },
-      {
-       "name": "Rate",
-       "objection": "This is the phone rate objection.",
-       "wordTrack": "This is the phone rate word track."
-      },
-      {
-       "name": "Msg",
-       "objection": "This is the phone message comment.",
-       "wordTrack": "This is the phone message word track."
-      },
-      {
-       "name": "Appt",
-       "objection": "This is the phone appointment comment.",
-       "wordTrack": "This is the phone appointment word track."
-      }
-     ]
+        "type": "Birthday",
+        "id": "1",
+        "objTypes": [
+            {
+                "name": "Greeting",
+                "objection": "<p><b>Customer: </b>Hello?</p>",
+                "wordTrack": "<p>Hello, may I speak with [customerName] please?</p><p><em>They reply this is he/she.</em></p><p>Good morning / afternoon [customerName], this is [yourName] with [yourCompany] and I'm calling to wish you a happy birthday!</p>"
+            }
+        ]
     },
     {
-     "type": "Equity",
-     "id": "2",
-     "objTypes": [
-      {
-       "name": "Price",
-       "objection": "This is the equity price objection.",
-       "wordTrack": "This is the equity price word track."
-      },
-      {
-       "name": "Trade",
-       "objection": "This is the equity trade objection.",
-       "wordTrack": "This is the equity trade word track."
-      },
-      {
-       "name": "Avail",
-       "objection": "This is the equity availability objection.",
-       "wordTrack": "This is the equity availability word track."
-      },
-      {
-       "name": "Dist",
-       "objection": "This is the equity distance objection.",
-       "wordTrack": "This is the equity distance word track."
-      },
-      {
-       "name": "Credit",
-       "objection": "This is the equity credit objection.",
-       "wordTrack": "This is the equity credit word track."
-      },
-      {
-       "name": "Cash",
-       "objection": "This is the equity cash down objection.",
-       "wordTrack": "This is the equity cash down word track."
-      },
-      {
-       "name": "Rate",
-       "objection": "This is the equity rate objection.",
-       "wordTrack": "This is the equity rate word track."
-      },
-      {
-       "name": "Msg",
-       "objection": "This is the equity message comment.",
-       "wordTrack": "This is the equity message word track."
-      },
-      {
-       "name": "Appt",
-       "objection": "This is the equity appointment comment.",
-       "wordTrack": "This is the equity appointment word track."
-      }
-     ]
+        "type": "Appt Reminder",
+        "id": "2",
+        "objTypes": [
+            {
+                "name": "Greeting",
+                "objection": "<p><b>Customer: </b>Hello?</p>",
+                "wordTrack": "<p>Hello, may I speak with [customerName] please?</p><p><em>They reply this is he/she.</em></p><p>Good morning / afternoon [customerName], this is [yourName] with [yourCompany] and I'm calling to remind you of your upcoming appointment at [day / time].</p>"
+            },
+            {
+                "name": "Cancelling",
+                "objection": "I'm sorry, I'm not going to be able to make this appt.",
+                "wordTrack": "Not a problem.  I'll go ahead and cancel your appointment.  I have openings later this week, or we can reschedule for a later date. What works best for you?"
+            },
+            {
+                "name": "Voicemail",
+                "objection": "Call goes to voicemail.",
+                "wordTrack": "<p>Your carefully crafted voicemail message word track goes here.</p>"
+            }
+        ]
     },
     {
-     "type": "Lower APR",
-     "id": "3",
-     "objTypes": [
-      {
-       "name": "Price",
-       "objection": "This is the lower APR price objection.",
-       "wordTrack": "This is the lower APR price word track."
-      },
-      {
-       "name": "Trade",
-       "objection": "This is the lower APR trade objection.",
-       "wordTrack": "This is the lower APR trade word track."
-      },
-      {
-       "name": "Avail",
-       "objection": "This is the lower APR availability objection.",
-       "wordTrack": "This is the lower APR availability word track."
-      },
-      {
-       "name": "Dist",
-       "objection": "This is the lower APR distance objection.",
-       "wordTrack": "This is the lower APR distance word track."
-      },
-      {
-       "name": "Credit",
-       "objection": "This is the lower APR credit objection.",
-       "wordTrack": "This is the lower APR credit word track."
-      },
-      {
-       "name": "Cash",
-       "objection": "This is the lower APR cash down objection.",
-       "wordTrack": "This is the lower APR cash down word track."
-      },
-      {
-       "name": "Rate",
-       "objection": "This is the lower APR rate objection.",
-       "wordTrack": "This is the lower APR rate word track."
-      },
-      {
-       "name": "Msg",
-       "objection": "This is the lower APR message comment.",
-       "wordTrack": "This is the lower APR message word track."
-      },
-      {
-       "name": "Appt",
-       "objection": "This is the lower APR appointment comment.",
-       "wordTrack": "This is the lower APR appointment word track."
-      }
-     ]
-    },
-    {
-     "type": "Desk Log",
-     "id": "4",
-     "objTypes": [
-      {
-       "name": "Price",
-       "objection": "This is the desk log price objection.",
-       "wordTrack": "This is the desk log price word track."
-      },
-      {
-       "name": "Trade",
-       "objection": "This is the desk log trade objection.",
-       "wordTrack": "This is the desk log trade word track."
-      },
-      {
-       "name": "Avail",
-       "objection": "This is the desk log availability objection.",
-       "wordTrack": "This is the desk log availability word track."
-      },
-      {
-       "name": "Dist",
-       "objection": "This is the desk log distance objection.",
-       "wordTrack": "This is the desk log distance word track."
-      },
-      {
-       "name": "Credit",
-       "objection": "This is the desk log credit objection.",
-       "wordTrack": "This is the desk log credit word track."
-      },
-      {
-       "name": "Cash",
-       "objection": "This is the desk log cash down objection.",
-       "wordTrack": "This is the desk log cash down word track."
-      },
-      {
-       "name": "Rate",
-       "objection": "This is the desk log rate objection.",
-       "wordTrack": "This is the desk log rate word track."
-      },
-      {
-       "name": "Msg",
-       "objection": "This is the desk log message comment.",
-       "wordTrack": "This is the desk log message word track."
-      },
-      {
-       "name": "Appt",
-       "objection": "This is the desk log appointment comment.",
-       "wordTrack": "This is the desk log appointment word track."
-      }
-     ]
+        "type": "",
+        "id": "3",
+        "objTypes": [
+            {
+                "name": "Greeting",
+                "objection": "<p><b>Customer: </b>Hello?</p>",
+                "wordTrack": "<p>Hello, may I speak with [customerName] please?</p><p><em>They reply this is he/she.</em></p><p>Good morning / afternoon [customerName], this is [yourName] with [yourCompany] and I'm calling to remind you of your upcoming appointment at [day / time].</p>"
+            }
+        ]
     }
-   ]
+]

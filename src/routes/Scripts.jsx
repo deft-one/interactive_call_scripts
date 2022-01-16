@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import styles from './editor.module.css';
 import ScriptSelectors from '../components/ScriptSelectors';
 import ObjectionSelectors from '../components/ObjectionSelectors';
 import Conversation from '../components/Conversation';
@@ -35,14 +34,14 @@ const Scripts = () => {
 
     return(
         <>
-            <main className={styles.main}>
+            <main>
                 <ScriptSelectors 
                     handleScriptClick={handleScriptClick} 
                     activeScriptType={activeScriptType} 
                     setActiveScriptType={(e) => { setActiveScriptType(e) }} 
                     scripts={scripts} 
                 />
-                <article className={styles.article}>
+                <article>
                     {
                         activeScriptType !== '' ? 
                         <ObjectionSelectors 

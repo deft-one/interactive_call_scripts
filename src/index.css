@@ -5,6 +5,7 @@
     --main-text-color: rgb(255, 255, 255);
     --objection-color: rgb(61, 0, 27);
     --wordTrack-color: rgb(22, 0, 59);
+    --obj-selector-button: rgb(0, 255, 115);
 }
 
 *, *::before, *::after {
@@ -12,11 +13,11 @@
     padding: 0;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    color: var(--main-text-color);
 }
 
 html, body {
     scroll-behavior: smooth;
+    color: var(--main-text-color);
 }
 
 h1 {

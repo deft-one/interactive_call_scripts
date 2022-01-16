@@ -34,16 +34,6 @@ const Header = () => {
                             to="/editor"
                             >Editor</NavLink>
                     </li>
-                    <li className={styles.linkLi}>
-                        <NavLink 
-                            className={
-                                ({isActive}) => {
-                                    return isActive ? `${styles.link} ${styles.activeLink}` : `${styles.link}`;
-                                }
-                            }
-                            to="/dashboard"
-                            >Dashboard</NavLink>
-                    </li>
                 </ul>
             </nav>
         </>

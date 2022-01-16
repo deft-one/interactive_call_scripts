@@ -1,4 +1,4 @@
-import styles from './objectionselectors.module.css';
+import styles from './selectorbuttons.module.css';
 
 const ObjectionSelectors = ({scripts, activeObjectionType, handleObjectionCick, activeScriptType}) => {
 

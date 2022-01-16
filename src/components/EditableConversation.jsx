@@ -1,6 +1,6 @@
 import styles from '../components/editableconversation.module.css';
 
-const EditableConversation = ({scripts, objectionText, wordTrackText, activeScriptType, activeObjectionType, handleSaveClick, handleObjectionChange, handleWordTrackChange, scriptInputResize}) => {
+const EditableConversation = ({scripts, objectionText, wordTrackText, activeScriptType, activeObjectionType, handleSaveClick, handleObjectionChange, handleWordTrackChange}) => {
     return(
         <div className={styles.trackGroup}>
             {
@@ -16,16 +16,14 @@ const EditableConversation = ({scripts, objectionText, wordTrackText, activeScri
                         className={styles.trackGroup}>
                         <textarea 
                             id={`objType_${index}`} 
-                            type="text" 
-                            className={styles.objection} 
                             value={objectionText} 
+                            className={styles.objection} 
                             onChange={handleObjectionChange} 
                         ></textarea>
                         <textarea 
                             id={`wordType_${index}`} 
-                            type="text" 
-                            className={styles.wordTrack} 
                             value={wordTrackText} 
+                            className={styles.wordTrack} 
                             onChange={handleWordTrackChange} 
                         ></textarea>
                         <button onClick={handleSaveClick} className={styles.saveButton}>Save</button>
@@ -39,7 +37,3 @@ const EditableConversation = ({scripts, objectionText, wordTrackText, activeScri
 }
 
 export default EditableConversation;
-
-// index.objTypes.objection  index.objTypes.wordTrack
-
-// NEED TO FIGURE OUT HOW TO POST THE DATA TO THE API IN THE CORRECT POSITION

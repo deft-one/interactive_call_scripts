@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import styles from './editor.module.css';
 import ScriptSelectors from '../components/ScriptSelectors';
 import ObjectionSelectors from '../components/ObjectionSelectors';
 import EditableConversation from '../components/EditableConversation';
@@ -67,7 +66,6 @@ const Editor = () => {
         let tempScripts = [...scripts];
         tempScripts[tempScriptID].objTypes[tempObjID].objection = objectionText;
         tempScripts[tempScriptID].objTypes[tempWordID].wordTrack = wordTrackText;
-        console.log(tempScripts);
         setScripts(tempScripts);
         axios
             .put(`${baseURL}${tempScriptID}`, 
@@ -83,14 +81,17 @@ const Editor = () => {
 
     return(
         <>
-            <main className={styles.main}>
+            <main>
                 <ScriptSelectors 
                     handleScriptClick={handleScriptClick} 
                     activeScriptType={activeScriptType} 
                     setActiveScriptType={(e) => { setActiveScriptType(e) }} 
                     scripts={scripts} 
+                    scriptID={scriptID} 
+                    objID={objID} 
+                    wordID={wordID} 
                 />
-                <article className={styles.article}>
+                <article>
                     {
                         activeScriptType !== '' ? 
                         <ObjectionSelectors 
